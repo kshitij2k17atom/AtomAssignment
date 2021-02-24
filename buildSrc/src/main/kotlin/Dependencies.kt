@@ -7,12 +7,22 @@ object Dependencies {
 
     object Kotlin {
         const val stdLib = "org.jetbrains.kotlin:kotlin-stdlib:${ProjectProperties.kotlinVersion}"
+        const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.2"
     }
 
     object AndroidX {
         const val core = "androidx.core:core-ktx:1.3.2"
         const val appCompat = "androidx.appcompat:appcompat:1.2.0"
         const val constraintLayout = "androidx.constraintlayout:constraintlayout:2.0.4"
+        const val fragment = "androidx.fragment:fragment-ktx:1.3.0"
+        const val activity = "androidx.activity:activity-ktx:1.2.0"
+
+        object Lifecycle {
+            private const val lifecycleVersion = "2.3.0"
+
+            const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
+            const val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
+        }
 
         object Navigation {
             private const val navVersion = "2.3.3"
@@ -22,12 +32,13 @@ object Dependencies {
             const val safeArgs =
                 "androidx.navigation:navigation-safe-args-gradle-plugin:$navVersion"
         }
+    }
 
-        object Fragment {
-            private const val fragmentVersion = "1.2.5"
+    object Dagger {
+        private const val daggerVersion = "2.32"
 
-            const val fragment = "androidx.fragment:fragment-ktx:$fragmentVersion"
-        }
+        const val dagger = "com.google.dagger:dagger:$daggerVersion"
+        const val daggerCompiler = "com.google.dagger:dagger-compiler:$daggerVersion"
     }
 
     object Material {
