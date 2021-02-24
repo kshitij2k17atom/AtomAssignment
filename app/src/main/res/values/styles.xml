@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Widget.LoginButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+    <style name="Widget.OutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="strokeColor">?attr/colorOnSurface</item>
         <item name="android:textColor">?attr/colorOnSurface</item>
         <item name="cornerRadius">16dp</item>

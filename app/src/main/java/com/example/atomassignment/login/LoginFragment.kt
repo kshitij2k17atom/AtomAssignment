@@ -51,6 +51,10 @@ class LoginFragment : Fragment() {
             )
         }
 
+        binding.loginAsGuest.setOnClickListener {
+            viewModel.onRegistrationRequested()
+        }
+
         return binding.root
     }
 

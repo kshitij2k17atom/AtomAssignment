@@ -11,4 +11,9 @@
     <string name="captionMindfulnessHomeFragment">A more mindful you</string>
     <string name="captionMindfulnessFragmentHome">build your meditation experience</string>
     <string name="fragmentLabelHome">Home</string>
+    <string name="labelRegistrationFragment">Register</string>
+    <string name="introTextRegistration">Hi, what do your friends call you?</string>
+    <string name="hintTextName">Name</string>
+    <string name="buttonTextContinue">Continue</string>
+    <string name="loginDisplayNameMessage">Logged in as %1$s</string>
 </resources>

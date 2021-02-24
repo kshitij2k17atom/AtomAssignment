@@ -50,13 +50,22 @@ class LoginViewModel(
                 .getSignedInAccountFromIntent(signInResultIntent)
                 .await()
             val authCredentials = GoogleAuthProvider.getCredential(account.idToken, null)
-            auth.signInWithCredential(authCredentials).await()
+            val authResult = auth.signInWithCredential(authCredentials).await()
+
             _loginState.postValue(AuthState.Authenticated)
-            _navigationEvents.postValue(LoginFragmentDirections.goToHome())
+            _navigationEvents.postValue(
+                LoginFragmentDirections.goToHome(
+                    authResult.user?.displayName ?: "Unknown"
+                )
+            )
         } catch (ex: Exception) {
             Log.e(Tag, "Failed to sign-in with Google", ex)
             _loginState.postValue(AuthState.Unauthenticated)
         }
+    }
+
+    fun onRegistrationRequested() {
+        _navigationEvents.postValue(LoginFragmentDirections.goToRegistration())
     }
 
     class Factory @Inject constructor(
