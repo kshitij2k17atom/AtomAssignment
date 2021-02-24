@@ -7,4 +7,8 @@
     <string name="buttonTextGuestLogin">Continue as Guest</string>
     <string name="captionTermsAndConditions">By creating an account you agree to our Terms of Service and Privacy Policy</string>
     <string name="snackbarMessageLoginFailed">Login failed</string>
+    <string name="contentDescriptionMindfulness">Mindfulness icon</string>
+    <string name="captionMindfulnessHomeFragment">A more mindful you</string>
+    <string name="captionMindfulnessFragmentHome">build your meditation experience</string>
+    <string name="fragmentLabelHome">Home</string>
 </resources>

@@ -52,6 +52,7 @@ class LoginViewModel(
             val authCredentials = GoogleAuthProvider.getCredential(account.idToken, null)
             auth.signInWithCredential(authCredentials).await()
             _loginState.postValue(AuthState.Authenticated)
+            _navigationEvents.postValue(LoginFragmentDirections.goToHome())
         } catch (ex: Exception) {
             Log.e(Tag, "Failed to sign-in with Google", ex)
             _loginState.postValue(AuthState.Unauthenticated)
