@@ -7,7 +7,8 @@ buildscript {
     dependencies {
         classpath(Dependencies.Gradle.androidPlugin)
         classpath(Dependencies.Gradle.kotlinPlugin)
-        classpath(Dependencies.Firebase.gms)
+        classpath(Dependencies.Gms.gms)
+        classpath(Dependencies.AndroidX.Navigation.safeArgs)
     }
 }
 
