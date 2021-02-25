@@ -7,31 +7,30 @@
 
     <ImageView
         android:id="@+id/mindfulnessIcon"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_margin="16dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:contentDescription="@string/contentDescriptionMindfulness"
         android:src="@drawable/ic_mindfulness"
-        app:layout_constraintBottom_toTopOf="@+id/mindfulnessSubtitle"
+        app:layout_constraintBottom_toTopOf="@+id/imageBottomGuideline"
+        app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintTop_toTopOf="@+id/imageTopGuideline" />
 
     <TextView
         android:id="@+id/mindfulnessSubtitle"
-        android:layout_width="0dp"
+        android:layout_width="379dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:text="@string/captionMindfulnessHomeFragment"
         android:textAlignment="center"
         android:textAppearance="?attr/textAppearanceSubtitle1"
         android:textSize="26sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/mindfulnessCaption"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +38,7 @@
 
     <TextView
         android:id="@+id/mindfulnessCaption"
-        android:layout_width="0dp"
+        android:layout_width="379dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
@@ -47,22 +46,51 @@
         android:text="@string/captionMindfulnessFragmentHome"
         android:textAlignment="center"
         android:textAppearance="?attr/textAppearanceCaption"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mindfulnessSubtitle" />
+        app:layout_constraintTop_toBottomOf="@+id/mindfulnessSubtitle" />
 
     <TextView
         android:id="@+id/displayName"
-        android:layout_width="0dp"
+        android:layout_width="379dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
         android:textAlignment="center"
         android:textAppearance="?attr/textAppearanceCaption"
         android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mindfulnessCaption"
+        app:layout_constraintVertical_bias="1.0"
+        tools:text="Logged in John Doe" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/logout"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonTextLogout"
+        android:textAppearance="?attr/textAppearanceCaption"
+        android:textColor="?attr/colorOnSurface"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="Logged in John Doe" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/imageBottomGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/imageTopGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
