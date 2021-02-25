@@ -1,5 +1,9 @@
 # Atom Assignment App
 
+## Download APK
+
+APK available here: [APK Link](https://github.com/kshitij2k17atom/AtomAssignment/releases/download/1.0.0/app-release.apk)
+
 This repository contains the assignment app for Atom.
 
 Technologies used:
