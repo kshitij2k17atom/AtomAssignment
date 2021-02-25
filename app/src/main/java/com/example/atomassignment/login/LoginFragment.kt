@@ -18,9 +18,7 @@ import com.google.android.material.snackbar.Snackbar
 class LoginFragment : Fragment() {
 
     private val loginComponent: LoginComponent by lazy {
-        appComponent()
-            .loginComponent()
-            .create()
+        appComponent().loginComponent().create()
     }
 
     private val viewModel: LoginViewModel by viewModels {

@@ -16,4 +16,5 @@
     <string name="hintTextName">Name</string>
     <string name="buttonTextContinue">Continue</string>
     <string name="loginDisplayNameMessage">Logged in as %1$s</string>
+    <string name="labelRedirectFragment">Redirect</string>
 </resources>
